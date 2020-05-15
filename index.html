@@ -7,67 +7,63 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Huddle landing page with alternating feature blocks</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <img src="/assets/images/logo.svg" alt="">
-      <a href="">Try It Free</a>
-    </nav>
-    <section>
-      <div>
-        <h1>
-          Build The Community <br><span>Your Fans Will Love</span> 
-        </h1>
-        <h4>
-          Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
-          Create connections with your users as you engage in genuine discussion. 
-        </h4>
-        <a href="">Get Started For Free</a>
-      </div>
-      <div>
-        <img src="" alt="">
-      </div>
-    </section>
+  <nav class="main-nav" aria-label="Nav">
+    <ul class="main-nav__list">
+      <li class="main-nav__item"><a href="" class="main-nav__link"><img src="/assets/images/logo.svg" alt="" class="main-nav__image"></a></li>
+      <li class="main-nav__item"><a href="" class="main-nav__link">Try It Free</a></li>
+    </ul>
+  </nav>
+  <header class="lead-pitch" aria-label="Blurb">
+    <div class="lead-pitch__blurb">
+      <h1 class="lead-pitch__header">
+        Build The Community <br><span>Your Fans Will Love</span> 
+      </h1>
+      <h4 class="lead-pitch__copy">
+        Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
+        Create connections with your users as you engage in genuine discussion. 
+      </h4>
+      <a class="lead-pitch__button" href="">Get Started For Free</a>
+    </div>
+    <figure class="lead-pitch__figure">
+      <img class="lead-pitch__image" src="/assets/images/illustration-mockups.svg" alt="">
+    </figure>
   </header>
-  <main>
-    <section>
-      <div>
-        <img src="" alt="">
-      </div>
-      <div>
-        <h3>Grow Together</h3>
-        <p>
+  <main class="card-container">
+    <section class="card">
+      <figure class="card__figure">
+        <img class="card__image" src="/assets/images/illustration-grow-together.svg" alt="">
+      </figure>
+      <div class="card__text">
+        <h3 class="card__header">Grow Together</h3>
+        <p class="card__copy">
           Generate meaningful discussions with your audience and build a strong, loyal community. 
           Think of the insightful conversations you miss out on with a feedback form. 
         </p>
       </div>
     </section>
-    <section>
-      <div>
-        <img src="" alt="">
-      </div>
-      <div>
-        <h3>Flowing Conversations</h3>
-        <p>
+    <section class="card">
+      <figure class="card__figure">
+        <img class="card__image" src="/assets/images/illustration-flowing-conversation.svg" alt="">
+      </figure>
+      <div class="card__text">
+        <h3 class="card__header">Flowing Conversations</h3>
+        <p class="card__copy">
           You wouldn't paginate a conversation in real life, so why do it online? Our threads 
           have just-in-time loading for a more natural flow.
         </p>
       </div>
     </section>
-    <section>
-      <div>
-        <img src="" alt="">
-      </div>
-      <div>
-        <h3>Your Users</h3>
-        <p>
+    <section class="card">
+      <figure class="card__figure">
+        <img class="card__image" src="/assets/images/illustration-your-users.svg" alt="">
+      </figure>
+      <div class="card__text">
+        <h3 class="card__header">Your Users</h3>
+        <p class="card__copy">
           It takes no time at all to integrate Huddle with your app's authentication solution. 
           This means, once signed in to your app, your users can start chatting immediately.
         </p>
@@ -75,40 +71,40 @@
     </section>
   </main>
   <footer>
-    <div>
-      <h2>Ready To Build Your Community?</h2>
-      <a href="">Get Started For Free</a>
-    </div>
+    <article class="floating-button">
+      <h2 class="floating-button__header">Ready To Build Your Community?</h2>
+      <a class="floating-button__button" href="">Get Started For Free</a>
+    </article>
     <section>
       <div>
         <img src="/assets/images/logo.svg" alt="">
         <div>
-          <div>
-            <i></i>
-            <p>
+          <div class="sidebar">
+            <img class="sidebar__icon" src="/assets/images/icon-location.svg" alt="">
+            <p class="sidebar__content">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
               incididunt ut labore et dolore magna aliqua
             </p>
           </div>
-          <div>
-            <i></i>
-            <a href="">+1-543-123-4567</a>
+          <div class="sidebar">
+            <img class="sidebar__icon" src="/assets/images/icon-phone.svg" alt="">
+            <a class="sidebar__content" href="">+1-543-123-4567</a>
           </div>
-          <div>
-            <i></i>
-            <a href="">example@huddle.com</a>
+          <div class="sidebar">
+            <img class="sidebar__icon" src="/assets/images/icon-email.svg" alt="">
+            <a class="sidebar__content" href="">example@huddle.com</a>
           </div>
         </div>
       </div>
       <div>
-        <a href="">About Us</a>
-        <a href="">What We Do</a>
-        <a href="">FAQ</a>
-      </div>
-      <div>
-        <a href="">Career</a>
-        <a href="">Blog</a>
-        <a href="">Contact Us</a>
+        <ul>
+          <li><a href="">About Us</a></li>
+          <li><a href="">What We Do</a></li>
+          <li><a href="">FAQ</a></li>
+          <li><a href="">Career</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Contact Us</a></li>
+        </ul> 
       </div>
       <div>
         <i></i>

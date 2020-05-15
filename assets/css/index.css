@@ -1,0 +1,23 @@
+
+.main-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+.lead-pitch {
+    background-color: hsl(193, 100%, 96%);
+}
+
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}

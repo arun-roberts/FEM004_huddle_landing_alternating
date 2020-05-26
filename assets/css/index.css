@@ -5,12 +5,19 @@ html, body {
     padding: 0 0;
 }
 
+@media (min-width: 500px) {
+    body {
+        font-size: calc(1rem + 0.5vw);
+    }
+}
+
 /* ==============================================================
                             NAV
 ============================================================== */
 
 .main-nav {
     position: fixed;
+    z-index: 1;
     top: 0;
     width: 100%;
     padding: 0 0;
@@ -30,13 +37,6 @@ html, body {
 
         .main-nav__item--button {
             float: right;
-            background-color: white;
-            border-radius: 5vw;
-            box-shadow: 0 0 2vw 0.5vw rgba(0, 0, 0, 0.1);
-            font-family: 'Open Sans', sans-serif;
-            font-weight: bold;
-            font-size: 2.6vw;
-            padding: 1.5vw 6vw;
         }
 
     .main-nav__link {
@@ -45,24 +45,40 @@ html, body {
         color: black;
     }
 
+        .main-nav__link--button {
+            background-color: white;
+            border-radius: 7.2vw;
+            box-shadow: 0 0 1.8vw 0.6vw rgba(56, 56, 56, 0.1);
+            font-family: 'Open Sans', sans-serif;
+            font-weight: bold;
+            font-size: 2.6vw;
+            padding: 1.5vw 5.9vw;
+        }
+
         .main-nav__image {
-            width: 27vw;
+            width: 25.5vw;
             margin-top: 2vw;
         }
+        
 
 /* ==============================================================
                             LEAD
 ============================================================== */
 
 .lead-pitch {
-    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
     background-color: hsl(193, 100%, 96%);
     background-image: url("../images/bg-hero-mobile.svg");
     background-repeat: no-repeat;
     background-size: 100%;
     text-align: center;
-    padding: 20vw 9.9vw 8vw;
+    padding: 35vw 9.9vw 8vw;
 }
+
+    .lead-pitch__blurb {
+        flex: 1 1 auto;
+    }
 
     .lead-pitch__header {
         font-family: 'Poppins', sans-serif;
@@ -74,12 +90,15 @@ html, body {
     .lead-pitch__copy {
         font-weight: 400;
         font-size: 4.2vw;
+        line-height: 6.2vw;
+        margin: 6.8vw 0 8.8vw;
     }
 
     .lead-pitch__figure {
+        flex: 1 1 auto;
         width: 100%;
         padding: 0 0;
-        margin: 12vw 0 0;
+        margin: 13.8vw 0 0;
     }
     
     .lead-pitch__image {
@@ -89,14 +108,15 @@ html, body {
 .pink-button {
     display: block;
     background-color: hsl(322, 100%, 66%);
-    border-radius: 5vw;
+    border-radius: 5.8vw;
     text-decoration: none;
     margin: auto;
 }
 
     .pink-button--lead {
         width: 73%;
-        padding: 3vw;
+        height: 8.1vw;
+        padding-top: 3vw;
     }
 
 .pink-button__text {
@@ -120,47 +140,85 @@ html, body {
 .card-container {
     width: 100%;
     text-align: center;
+    padding-top: 7.4vw;
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+    height: 128vw;
     border-radius: 5vw;
     box-shadow: 0 0 2vw 0.5vw rgba(0, 0, 0, 0.1);
-    padding: 5.4vw 2.2vw;
     margin: 8vw 5.4vw;
 }
 
+.card__figure {
+    flex: 1 1 auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .card__image {
-    width: 100%;
+    width: 93.5%;
+}
+
+.card__image--together {
+    margin: 13.5vw 2vw 8.48vw;
+}
+
+.card__image--flowing {
+    margin: 15.8vw 2vw 8vw;
+}
+
+.card__image--users {
+    margin: 14.2vw 2vw 8.5vw;
 }
 
 .card__text {
-    margin: 0 8vw;
+    flex: 1 1 auto;
+    margin: 0 10vw;
 }
 
 .card__header {
     font-family: 'Poppins', sans-serif;
     font-size: 5.3vw;
+    margin: 0 auto 2vw;
 }
 
 .card__copy {
     color: hsl(208, 11%, 55%);
     font-size: 3.72vw;
+    line-height: 5.7vw;
+    margin-top: 2.8vw;
 }
+
+.card__copy--users {
+    margin: 2.8vw 2vw 0;
+}
+
+/* ==============================================================
+                FLOATING SECTION WITH PINK BUTTON
+============================================================== */
 
 .floater {
     position: relative;
     top: 20vw;
-    width: 94.5%;
-    height: 50vw;
+    width: 94.2%;
+    height: 47vw;
     border-radius: 5vw;
     background-color: white;
     box-shadow: 0 0 2vw 0.5vw rgba(0, 0, 0, 0.1);
     margin: 0 auto;
 }
 
+.floater__container {
+    padding-top: 10vw;   
+}
+
 .floater__header {
     font-family: 'Poppins', sans-serif;
     font-size: 4.82vw;
+    /* margin: 20vw auto 2vw; */
 }
 
 .pink-button--floater {
@@ -173,8 +231,6 @@ html, body {
     word-spacing: 0.2vw;
 }   
 
-
-
 /* ==============================================================
                             FOOTER
 ============================================================== */
@@ -182,25 +238,111 @@ html, body {
 .footer {
     background-color: hsl(192, 100%, 9%);
     padding: 30vw 4.3vw 10vw;
+    color: white;
+    text-decoration: none;
 }
 
 .footer-icon {
     margin: 0;
 }
 
-.footer-icon__link {
-    /* margin-left: 5vw; */
-}
-
 .footer-icon__image {
     width: 44.5vw;
 }
 
-.attribution { 
-    font-size: 11px; 
-    text-align: center; 
+.sidebar-container {
+    
 }
 
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
+.sidebar {
+    display: flex;
+    margin-top: 6vw;
+}
+
+.sidebar__figure {
+    flex: 0 0 auto;
+}
+
+.sidebar__figure--location {
+    margin: 1vw 6.3vw 0 0;
+}
+
+.sidebar__figure--phone {
+    margin: 0 4vw 0 1vw;
+}
+
+.sidebar__figure--email {
+    margin: 0 3.8vw 0 0.8vw;
+}
+
+.sidebar__icon {
+    
+}
+
+.sidebar__content {
+    flex: 0 1 auto;
+    color: white;
+    text-decoration: none;
+    margin: 0 1vw;
+}
+
+.internal-links {
+    margin: 0 0;
+}
+
+.internal-links__list {
+    list-style: none;
+    font-size: 4.8vw;
+    padding: 0;
+}
+
+.internal-links__link {
+    text-decoration: none;
+    color: white;
+}
+
+.social-links {
+    text-align: center;
+}
+
+.social-links__border {
+    display: inline-block;
+    width: 8vw;
+    height: 8vw;
+    border: 0.38vw solid whitesmoke;
+    color: white;
+    border-radius: 50%;
+    margin: 0 0.9vw;
+} 
+
+.social-links__border:hover {
+    border-color: hsl(286, 46%, 52%);
+    color: hsl(286, 46%, 52%);
+}
+
+.social-links__icon {
+    font-size: 3.8vw;
+    margin: 2vw 2vw;
+}
+
+.legal {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.98vw;
+    font-weight: 400;
+    text-align: center;
+    margin: 10vw auto 30vw; 
+}
+
+.legal__copyright {
+    margin: 0 auto;
+}
+
+.legal__attribution { 
+    font-size: 3vw; 
+    margin: 0 auto;
+}
+
+.legal__link { 
+    color: hsl(0, 0%, 100%); 
+    /* text-decoration: none; */
 }

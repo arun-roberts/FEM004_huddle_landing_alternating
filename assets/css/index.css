@@ -1,14 +1,16 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --breakpoint-width: calc((600px - 100%) * 600);
+}
+
 html, body {
     width: 100%;
     font-family: 'Open Sans', sans-serif;
     margin: 0 0;
     padding: 0 0;
-}
-
-@media (min-width: 500px) {
-    body {
-        font-size: calc(1rem + 0.5vw);
-    }
 }
 
 /* ==============================================================
@@ -26,17 +28,19 @@ html, body {
 
     .main-nav__list {
         list-style-type: none;
+        display: flex;
+        justify-content: space-between;
         padding: 0 0;
-        margin: 6vw 4vw;
+        margin: 1.4rem 1rem;
     }
 
         .main-nav__item {
-            display: inline-flex;
+            display: inline;
             align-self: center;
         }
 
         .main-nav__item--button {
-            float: right;
+           text-align: center;
         }
 
     .main-nav__link {
@@ -46,59 +50,83 @@ html, body {
     }
 
         .main-nav__link--button {
+            width: 6rem;
+            height: 1.45rem;
             background-color: white;
-            border-radius: 7.2vw;
+            border-radius: 1.2rem;
             box-shadow: 0 0 1.8vw 0.6vw rgba(56, 56, 56, 0.1);
             font-family: 'Open Sans', sans-serif;
             font-weight: bold;
-            font-size: 2.6vw;
-            padding: 1.5vw 5.9vw;
+            font-size: 0.6rem;
+            line-height: 1.45rem;
         }
 
         .main-nav__image {
-            width: 25.5vw;
+            width: 6.1rem;
             margin-top: 2vw;
         }
-        
+
+@media (min-width: 500px) {
+
+}
 
 /* ==============================================================
                             LEAD
 ============================================================== */
 
 .lead-pitch {
-    display: flex;
-    flex-direction: column;
+    width: 100%;
     background-color: hsl(193, 100%, 96%);
     background-image: url("../images/bg-hero-mobile.svg");
     background-repeat: no-repeat;
     background-size: 100%;
     text-align: center;
-    padding: 35vw 9.9vw 8vw;
+    padding-top: 6rem;
 }
+
+    .lead-pitch__container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-width: 88.3%;
+        max-width: 90%;
+        width: var(--breakpoint-width);
+        margin: 0 auto;
+    }   
 
     .lead-pitch__blurb {
         flex: 1 1 auto;
+        min-width: 45.5%;
+        max-width: 89%;
+        width: var(--breakpoint-width);
+        margin: 0 auto;
     }
 
     .lead-pitch__header {
         font-family: 'Poppins', sans-serif;
-        font-size: 6.3vw;
+        font-size: 1.638rem;
         padding: 0 0;
         margin: 0 0;
     }
 
+    .lead-pitch__header--span {
+        font-size: 1.64rem;
+    }
+
     .lead-pitch__copy {
         font-weight: 400;
-        font-size: 4.2vw;
+        font-size: 1.092rem;
         line-height: 6.2vw;
         margin: 6.8vw 0 8.8vw;
     }
 
     .lead-pitch__figure {
         flex: 1 1 auto;
-        width: 100%;
+        min-width: 54.5%;
+        max-width: 89%;
+        width: var(--breakpoint-width);
         padding: 0 0;
-        margin: 13.8vw 0 0;
+        margin: 13.8vw auto 0;
     }
     
     .lead-pitch__image {
@@ -110,25 +138,18 @@ html, body {
     background-color: hsl(322, 100%, 66%);
     border-radius: 5.8vw;
     text-decoration: none;
-    margin: auto;
-}
-
-    .pink-button--lead {
-        width: 73%;
-        height: 8.1vw;
-        padding-top: 3vw;
-    }
-
-.pink-button__text {
+    margin: 1rem auto;
     font-family: 'Open Sans', sans-serif;
     color: white;
     font-weight: bold;
 }
 
-    .pink-button__text--lead {
-        font-size: 3.1vw;
+    .pink-button--lead {
+        width: 80.2%;
+        height: 8.1vw;
+        font-size: 0.79rem;
         word-spacing: 0.2vw;
-    }   
+    } 
 
 
 /* ==============================================================
@@ -146,16 +167,22 @@ html, body {
 .card {
     display: flex;
     flex-direction: column;
-    height: 128vw;
-    border-radius: 5vw;
+    /* flex-wrap: wrap; */
+    min-width: 85.5%;
+    max-width: 88.9%;
+    width: var(--breakpoint-width);
+    height: 29.7rem;
+    border-radius: 1rem;
     box-shadow: 0 0 2vw 0.5vw rgba(0, 0, 0, 0.1);
-    margin: 8vw 5.4vw;
+    margin: 2.6rem auto;
 }
 
 .card__figure {
     flex: 1 1 auto;
-    margin-top: 0;
-    margin-bottom: 0;
+    min-width: 50%;
+    max-width: 93.5%;
+    width: var(--breakpoint-width);
+    margin: 0 auto;
 }
 
 .card__image {
@@ -203,7 +230,9 @@ html, body {
 .floater {
     position: relative;
     top: 20vw;
-    width: 94.2%;
+    min-width: 55.6%;
+    max-width: 93.9%;
+    width: var(--breakpoint-width);
     height: 47vw;
     border-radius: 5vw;
     background-color: white;
@@ -250,12 +279,19 @@ html, body {
     width: 44.5vw;
 }
 
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
 .sidebar-container {
     
 }
 
 .sidebar {
     display: flex;
+    font-size: 1rem;
     margin-top: 6vw;
 }
 
@@ -291,6 +327,9 @@ html, body {
 }
 
 .internal-links__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     list-style: none;
     font-size: 4.8vw;
     padding: 0;
@@ -305,24 +344,51 @@ html, body {
     text-align: center;
 }
 
-.social-links__border {
-    display: inline-block;
-    width: 8vw;
-    height: 8vw;
-    border: 0.38vw solid whitesmoke;
-    color: white;
-    border-radius: 50%;
-    margin: 0 0.9vw;
-} 
+.social-links__list {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
 
-.social-links__border:hover {
+.social-links__item {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    margin: 0 0.3rem;
+    padding: 0;
+}
+
+.social-links__link {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.social-links__link:hover {
     border-color: hsl(286, 46%, 52%);
     color: hsl(286, 46%, 52%);
 }
 
 .social-links__icon {
+    align-self: center;
+    color: white;
     font-size: 3.8vw;
-    margin: 2vw 2vw;
+    margin: 0;
+    padding: 0;
+}
+
+.social-links__link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 0.05rem solid white;
+    border-radius: 50%;
 }
 
 .legal {

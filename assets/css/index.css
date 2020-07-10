@@ -57,31 +57,39 @@ h1, h2, h3 {
             align-self: center;
         }
 
+            .main-nav__image {
+                width: 6.5rem;
+                margin-top: 0.5rem;
+            }
+
         .main-nav__item--button {
            text-align: center;
         }
 
-    .main-nav__link {
-        display: block;
-        text-decoration: none;
-        color: black;
-    }
+            .main-nav__link {
+                display: block;
+                text-decoration: none;
+                color: black;
+                width: 6rem;
+                height: 1.45rem;
+                background-color: white;
+                border-radius: 1.2rem;
+                box-shadow: 0 0 1.8vw 0.6vw rgba(56, 56, 56, 0.1);
+                font-weight: bold;
+                font-size: 0.6rem;
+                line-height: 1.4rem;
+                transition: all 0.25s ease-in;
+            }
 
-        .main-nav__image {
-            width: 6.5rem;
-            margin-top: 0.5rem;
-        }
+            .main-nav__link:hover {
+                background-color: hsl(322, 100%, 66%);
+                color: white;
+            }
 
-        .main-nav__link--button {
-            width: 6rem;
-            height: 1.45rem;
-            background-color: white;
-            border-radius: 1.2rem;
-            box-shadow: 0 0 1.8vw 0.6vw rgba(56, 56, 56, 0.1);
-            font-weight: bold;
-            font-size: 0.6rem;
-            line-height: 1.4rem;
-        }
+            .main-nav__link:active {
+                box-shadow: none;
+            }
+        
 
 @media (min-width: 1000px) {
     .main-nav__list {
@@ -93,7 +101,7 @@ h1, h2, h3 {
         margin-top: 0.4rem;
     }
     
-    .main-nav__link--button {
+    .main-nav__link {
         width: 12.3rem;
         height: 3rem;
         border-radius: 1.8rem;
@@ -144,7 +152,17 @@ h1, h2, h3 {
             text-decoration: none;
             color: white;
             font-weight: bold;
+            transition: all 0.25s ease-in;
         }
+
+            .pink-button:hover {
+                background-color: white;
+                color: hsl(322, 100%, 66%);
+            }
+
+            .pink-button:active {
+                box-shadow: none;
+            }
         
             .pink-button--lead {
                 width: 79.4%;
@@ -485,6 +503,11 @@ h1, h2, h3 {
                 margin: 0 0.2rem;
             }
 
+            .sidebar__content:hover {
+                color: hsl(322, 100%, 66%);
+                transition: color 0.2s ease-in;
+            }
+
     .internal-links {
         margin: 0.3rem 0;
         width: 100%;
@@ -512,6 +535,11 @@ h1, h2, h3 {
                 .internal-links__link {
                     text-decoration: none;
                     color: white;
+                }
+
+                .internal-links__link:hover {
+                    color: hsl(322, 100%, 66%);
+                    transition: all 0.2s ease-in;
                 }
 
     .social-links {
@@ -553,17 +581,22 @@ h1, h2, h3 {
                         border-radius: 50%;
                     }
 
-                    .social-links__link:hover {
-                        border-color: hsl(286, 46%, 52%);
-                        color: hsl(286, 46%, 52%);
-                    }
-
                         .social-links__icon {
                             align-self: center;
                             color: white;
                             font-size: 0.95rem;
                             margin: 0;
                             padding: 0;
+                        }
+
+                        .social-links__link:hover::after {
+                            border-color: hsl(322, 100%, 66%);
+                            transition: border-color 0.2s ease-out;
+                        } 
+
+                        .social-links__link:hover .social-links__icon {
+                            color: hsl(322, 100%, 66%);
+                            transition: color 0.2s ease-out;
                         }
 
     .legal {
@@ -585,7 +618,11 @@ h1, h2, h3 {
 
             .legal__link { 
                 color: hsl(0, 0%, 100%); 
-                /* text-decoration: none; */
+                transition: color 0.2s ease-out;
+            }
+
+            .legal__link:hover {
+                color: hsl(322, 100%, 66%);
             }
 
 @media (min-width: 1000px) {
